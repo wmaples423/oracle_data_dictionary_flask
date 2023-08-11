@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask App with Entry Fields</title>
+</head>
+<body>
+    <h1>Flask App with Entry Fields</h1>
+
+    <form method="POST">
+        <label for="field1">Field 1:</label>
+        <input type="text" id="field1" name="field1" required>
+        <br>
+        <label for="field2">Field 2:</label>
+        <input type="text" id="field2" name="field2" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Entries:</h2>
+    <ul>
+        {% for entry in entries %}
+            <li>{{ entry.field1 }} - {{ entry.field2 }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
