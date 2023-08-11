@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resutls</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>Results</h1>
+    <p>Table 1: {{ table_1 }}</p>
+    <p>Table 2: {{ table_2 }}</p>
+    {% if matching_columns %}
+      <p>Matching columns: {{ matching_columns }}</p>
+    {% else %}
+      <p>No matching columns found.</p>
+    {% endif %}
+  </body>
+</html>
